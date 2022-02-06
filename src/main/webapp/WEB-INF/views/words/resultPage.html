@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a href="/word-tracker/finder">RETURN TO THE HOMEPAGE</a>
+
+<div th:each="word : ${wordList.getList()}">
+    <p th:text="${word}">VALUE</p>
+</div>
+
+</body>
+</html>

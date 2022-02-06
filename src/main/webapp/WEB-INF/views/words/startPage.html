@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form th:method="POST" th:action="@{/finder/result}" th:object="${wordList}">
+        <label for="url">Enter URL: </label>
+        <input type="text" th:field="*{url}" id="url"/>
+        <div style="color:red" th:if="${#fields.hasErrors('url')}" th:errors="*{url}">Url Error</div>
+        <br/>
+        <input type="submit" value="Find!"/>
+    </form>
+
+</body>
+</html>
